@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+    <h1>Admin Dashboard</h1>
+
+    {% if leaves %}
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>Employee</th>
+            <th>Type</th>
+            <th>Days</th>
+            <th>Reason</th>
+            <th>Status</th>
+        </tr>
+
+        {% for leave in leaves %}
+
+        <tr>
+
+            <td>{{ leave[1] }}</td>
+            <td>{{ leave[2] }}</td>
+            <td>{{ leave[3] }}</td>
+            <td>{{ leave[4] }}</td>
+            <td>{{ leave[5] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+
+    <h3>No Leave Requests Yet</h3>
+
+    {% endif %}
+
+</body>
+
+</html>
