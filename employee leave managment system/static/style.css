@@ -1,0 +1,15 @@
+body {
+    background: #f4f6f9;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+Add this inside layout.html:
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
